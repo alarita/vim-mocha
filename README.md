@@ -1,5 +1,13 @@
 # vim-mocha
 
+This is a fork from [vim-mocha](https://github.com/geekjuice/vim-mocha).
+
+The current vim-mocha is limited for my personal workflow. 
+
+This fork is intended only for my workflow but will improve it overtime during my development. 
+
+This works with esbuild compiler.
+
 This is a lightweight Mocha runner for Vim. Extracted from
 [vim-spec](https://github.com/geekjuice/vim-spec)
 
@@ -15,7 +23,7 @@ __Use both RSpec and Mocha? Take a look at [vim-spec](https://github.com/geekjui
 Using [vundle](https://github.com/gmarik/vundle):
 
 ```vim
-Bundle 'geekjuice/vim-mocha'
+Bundle 'alarita/vim-mocha'
 ```
 
 If using zsh on OS X it may be necessary to run move `/etc/zshenv` to `/etc/zshrc`.
@@ -25,13 +33,13 @@ Using [pathogen](https://github.com/tpope/vim-pathogen)
 
 ```sh
 cd ~/.vim/bundle
-git clone git://github.com/geekjuice/vim-spec.git
+git clone git://github.com/alarita/vim-spec.git
 ```
 
 Using [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'geekjuice/vim-mocha'
+Plug 'alarita/vim-mocha'
 ```
 
 
@@ -54,16 +62,13 @@ Like [thoughtbot/vim-rspec](https://github.com/thoughtbot/vim-rspec), the
 following variables can be overwritten for custom spec commands:
 
 * `g:mocha_js_command`
-* `g:mocha_coffee_command`
+* `g:mocha_ts_command`
 
 Examples:
 
 ```vim
 let g:mocha_js_command = "!mocha --recursive --no-colors {spec}"
-let g:mocha_coffee_command = "!mocha -b --compilers coffee:coffee-script{spec}"
-
-" Using test runners
-let g:mocha_coffee_command = "!cortado {spec}"
+let g:mocha_ts_command = "!mocha --recursive --no-colors {spec}"
 ```
 
 
